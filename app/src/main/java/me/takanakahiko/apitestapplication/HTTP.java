@@ -16,17 +16,16 @@ class HTTP {
         BufferedReader reader     = null;
         InputStream in;
         try {
-            connection = (HttpURLConnection) url.openConnection(); // URLに対するHTTP通信を開きます
-            connection.setRequestMethod("GET");                    // HTTPリクエストはGETで固定します
-            connection.connect();                                  // 通信を接続します
-
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.connect();
 
             try {
                 in = connection.getInputStream();
             } catch (IOException e){
                 in = connection.getErrorStream();
             }
-            if(in == null){
+            if(in == null) {
                 throw new IOException("The stream could not be opened.");
             }
 
