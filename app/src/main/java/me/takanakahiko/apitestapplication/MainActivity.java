@@ -4,10 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -49,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
                     task_search_station = new AsyncSearchStationTask();
                     task_search_station.execute(serach_word);
                 }
+            }
+        });
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ListView listView = (ListView) parent;
+                String item = (String) listView.getItemAtPosition(position);
+                Toast.makeText(getApplicationContext(), item + " clicked",Toast.LENGTH_LONG).show();
             }
         });
     }
