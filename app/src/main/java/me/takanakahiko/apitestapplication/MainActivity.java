@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private AsyncSearchStationTask task_search_station; // 駅を検索をする非同期タスクです
 
     private String[] stations = new String[]{};
+    ArrayAdapter<String> adapter;
 
 
     @Override
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         edit_search_word = (EditText) findViewById(R.id.edit_search_word);
         button_search    = (Button)   findViewById(R.id.button_search);
         lv               = (ListView) findViewById(R.id.listView1);
+
+        adapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1);
 
         button_search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,23 +130,10 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(text);
     }
 
-    private void addList(String text){
-        int old_len = stations.length;
-        String[] temp = new String[old_len+1];
-        System.arraycopy(stations,0,temp, 0, old_len);
-        temp[old_len] = text;
-        stations = new String[old_len+1];
-        System.arraycopy(temp,0,stations, 0, old_len+1);
-    }
-
-    private void setList(){
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_expandable_list_item_1, stations);
-        lv.setAdapter(adapter);
-    }
-
+    private void addList(String text){ adapter.add(text); }
+    private void setList(){ lv.setAdapter(adapter);}
     private void resetList(){
-        stations = new String[]{};
+        adapter.clear();
     }
 
     private void errorOnTask(String message){
