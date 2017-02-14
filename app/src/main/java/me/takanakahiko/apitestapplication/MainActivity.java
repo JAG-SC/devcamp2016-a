@@ -70,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private class AsyncSearchStationTask extends AsyncTask<String, Void, String> { // 非同期タスク（station/light API）
+    // 非同期タスク（station/light API）
+    private class AsyncSearchStationTask extends AsyncTask<String, Void, String> {
         private String error_message = "";
 
         @Override
@@ -127,7 +128,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private class AsyncSearchPostalCodeTask extends AsyncTask<String, Void, String> { // 非同期タスク（station API & geo API）
+    // 非同期タスク（station API & geo API）
+    private class AsyncSearchPostalCodeTask extends AsyncTask<String, Void, String> {
         private String error_message = "";
 
         @Override
