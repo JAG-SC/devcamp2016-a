@@ -3,75 +3,75 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="fefba22616083c734948a0cbaa01a07a7a3fa32e">
-        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2c2825cc9ffd9308896824a8acdc6316ffcd8973\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jar="/Users/Karen/git/devcamp2016-a/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_fec066f47dd0bdf8892eb84020d5724548af24dd\classes.dex" />
+        <dex dex="/Users/Karen/git/devcamp2016-a/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_d2dc63640ffb5ea94a2efef898c12222bd2d86d7/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jar="/Users/Karen/git/devcamp2016-a/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_71ce3b6f1d71ee0486f3ffdf6a7bcfecc30c42bc\classes.dex" />
+        <dex dex="/Users/Karen/git/devcamp2016-a/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_bc2e4035c229f7ff199b60a60574a5f9e1243a98/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jar="/Users/Karen/git/devcamp2016-a/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_66b6b0afe82b7aa3234a6976d5706765cb362bbb\classes.dex" />
+        sha1="5a08679cd65bf6dc86eb4527e2bdda1c1042802d">
+        <dex dex="/Users/Karen/git/devcamp2016-a/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_bdc9f9380e87c90b620307d50da803dfd5d2da0a/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="afd0723e6a03ac1ea2e60fb0832802c53be799aa">
-        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_8d7c477508aec4521d978f252e2bad5c39e33c74\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jar="/Users/Karen/git/devcamp2016-a/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_d57eab046af84c89b06161948b1c87dab2ed7dee\classes.dex" />
+        <dex dex="/Users/Karen/git/devcamp2016-a/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_8b6af67eaf23a3ae472dfc26d22718c1e2cf5504/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\takayuki\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jar="/Users/Karen/git/devcamp2016-a/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/Karen/git/devcamp2016-a/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_923a345fb03e71aef1b4fc25ca73e48f2f5d3d0f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_344f74982a229d64c2c17fb0aed34fe267bef454\classes.dex" />
+        <dex dex="/Users/Karen/git/devcamp2016-a/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_68d96899c8da48c28039ade4940c58038d62debf/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jar="/Users/Karen/git/devcamp2016-a/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="84d6848b4431d49377f9795ffac7defcc55bcaef">
+        <dex dex="/Users/Karen/git/devcamp2016-a/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4b7109281a70cd47a18d2a44b558e8586c20ad82/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Karen/git/devcamp2016-a/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_0e9aeaa1d3046463c0371f3719fb03c9a2338c49\classes.dex" />
+        <dex dex="/Users/Karen/git/devcamp2016-a/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_73dbf4c60afcc3c1fdf9a1aa3a94f5eb92dc3c51/classes.dex" />
     </item>
 
 </items>
