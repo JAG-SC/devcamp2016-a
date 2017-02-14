@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText edit_search_word;    // 検索する文字を入力するためのエディットビューです
     private Button button_search;       // 検索ボタンのビューです
     private ListView lv;
-    private AsyncSearchStationTask task_search_station; // 駅を検索をする非同期タスクです
+    private AsyncSearchStationTask task_search_station; // 駅を検索する非同期タスクです
+    private AsyncSearchPostalCodeTask task_search_postal_code; // 郵便番号を検索する非同期タスクです
 
     private String[] stations = new String[]{};
     ArrayAdapter<String> adapter;
@@ -51,23 +52,25 @@ public class MainActivity extends AppCompatActivity {
                     print("検索する文字を入力してください。");
                     button_search.setEnabled(true); // ボタンを有効に戻します
                 } else {
-                    task_search_station = new AsyncSearchStationTask();
-                    task_search_station.execute(serach_word);
+                    task_search_station = new AsyncSearchStationTask(); // 道（非同期タスク）を作る
+                    task_search_station.execute(serach_word);            // 実行する
                 }
             }
         });
 
+        // 駅名をタップすると下部に"(駅名) clicked"と表示される
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ListView listView = (ListView) parent;
                 String item = (String) listView.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(), item + " clicked",Toast.LENGTH_LONG).show();
+
+                Toast.makeText(getApplicationContext(), item + " clicked",Toast.LENGTH_LONG).show(); // 郵便番号入れたい
             }
         });
     }
 
-    private class AsyncSearchStationTask extends AsyncTask<String, Void, String> {
+    private class AsyncSearchStationTask extends AsyncTask<String, Void, String> { // 非同期タスク（station/light API）
         private String error_message = "";
 
         @Override
@@ -84,6 +87,63 @@ public class MainActivity extends AppCompatActivity {
                 error_message = e.toString();
                 return null;
             }
+
+        }
+
+        @Override
+        protected void onPostExecute(String results) {
+            super.onPostExecute(results);
+
+            if (results != null) {
+                try {
+                    JSONObject json = new JSONObject(results);
+                    JSONObject result_set = json.getJSONObject("ResultSet");
+                    if(result_set.has("Point")) {
+                        JSONArray points = result_set.optJSONArray("Point");
+                        if (points == null) {
+                            points = new JSONArray();
+                            points.put(result_set.getJSONObject("Point"));
+                        }
+                        resetList();
+                        for (int i = 0; i < points.length(); ++i) {
+                            JSONObject station = points
+                                    .getJSONObject(i)
+                                    .getJSONObject("Station");
+                            println(station.getString("Name"));
+                            addList(station.getString("Name"));
+                        }
+                        setList();
+                    } else {
+                        println("検索結果は0件でした。");
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    errorOnTask(e.toString());
+                }
+            } else {
+                errorOnTask(error_message);
+            }
+            button_search.setEnabled(true);
+        }
+    }
+
+    private class AsyncSearchPostalCodeTask extends AsyncTask<String, Void, String> { // 非同期タスク（station API & geo API）
+        private String error_message = "";
+
+        @Override
+        protected String doInBackground(String... strings) {
+            try {
+                String url_str = "http://geoapi.heartrails.com/api/json"
+                url_str += "?method=searchByGeoLocation"
+                url_str += "&x="+ keido + "&y=" + ido
+                URL api_request_url = new URL( url_str);
+                return HTTP.request(api_request_url);
+            } catch (IOException e) {
+                e.printStackTrace();
+                error_message = e.toString();
+                return null;
+            }
+
         }
 
         @Override
