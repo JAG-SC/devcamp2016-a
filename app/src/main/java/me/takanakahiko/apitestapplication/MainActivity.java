@@ -150,9 +150,9 @@ public class MainActivity extends AppCompatActivity {
                 String keido = geopoint.getString("longi_d");
                 String ido = geopoint.getString("lati_d");
 
-                url_str = "http://geoapi.heartrails.com/api/json"
-                url_str += "?method=searchByGeoLocation"
-                url_str += "&x="+ keido + "&y=" + ido
+                url_str = "http://geoapi.heartrails.com/api/json";
+                url_str += "?method=searchByGeoLocation";
+                url_str += "&x="+ keido + "&y=" + ido;
                 api_request_url = new URL( url_str);
                 return HTTP.request(api_request_url);
             } catch (IOException e) {
@@ -161,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 return null;
             } catch (JSONException e) {
                 e.printStackTrace();
+                return  null;
             }
 
         }
