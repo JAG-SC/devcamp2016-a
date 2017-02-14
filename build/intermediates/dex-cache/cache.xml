@@ -7,8 +7,13 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
+<<<<<<< HEAD
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
         <dex dex="C:\Users\ayurin\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_af82416fb4f40969ab87ae3b0f8ab55bacc1c719\classes.dex" />
+=======
+        sha1="f03d4d53de2668959e5f6f5fc56ac238053f290c">
+        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2c2825cc9ffd9308896824a8acdc6316ffcd8973\classes.dex" />
+>>>>>>> refs/remotes/origin/master
     </item>
     <item
         is-multidex="true"
@@ -43,8 +48,13 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
+<<<<<<< HEAD
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
         <dex dex="C:\Users\ayurin\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_6204e316a957d527ad90c1681e439512151d70ea\classes.dex" />
+=======
+        sha1="da98f1784e514b2a3218d90136e3f98f5754b27a">
+        <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_8d7c477508aec4521d978f252e2bad5c39e33c74\classes.dex" />
+>>>>>>> refs/remotes/origin/master
     </item>
     <item
         is-multidex="true"
