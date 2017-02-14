@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edit_search_word = (EditText) findViewById(R.id.edit_search_word);
-        button_search    = (Button)   findViewById(R.id.button_search);
+        edit_search_word = (EditText) findViewById(R.id.edit_search_word); // エディット検出
+        button_search    = (Button)   findViewById(R.id.button_search); // ボタン検出
         lv               = (ListView) findViewById(R.id.listView1);
 
         adapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1);
