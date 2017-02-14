@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 String item = (String) listView.getItemAtPosition(position);
                 task_search_postal_code = new AsyncSearchPostalCodeTask(); // 道（非同期タスク）を作る
                 task_search_postal_code.execute(item);            // 実行する
-                Toast.makeText(getApplicationContext(), item + " clicked",Toast.LENGTH_LONG).show(); // 郵便番号入れたい
+
             }
         });
     }
@@ -172,25 +172,10 @@ public class MainActivity extends AppCompatActivity {
             if (results != null) {
                 try {
                     JSONObject json = new JSONObject(results);
-                    JSONObject result_set = json.getJSONObject("response");
-                    if(result_set.has("Point")) {
-                        JSONArray points = result_set.optJSONArray("Point");
-                        if (points == null) {
-                            points = new JSONArray();
-                            points.put(result_set.getJSONObject("Point"));
-                        }
-                        resetList();
-                        for (int i = 0; i < points.length(); ++i) {
-                            JSONObject station = points
-                                    .getJSONObject(i)
-                                    .getJSONObject("Station");
-                            println(station.getString("Name"));
-                            addList(station.getString("Name"));
-                        }
-                        setList();
-                    } else {
-                        println("検索結果は0件でした。");
-                    }
+                    JSONObject reaponse = json.getJSONObject("response");
+                    JSONArray locations = reaponse.getJSONArray("location");
+                    String postal = locations.getJSONObject(0).getString("postal"); // ちょっとよくわからないです
+                    Toast.makeText(getApplicationContext(), postal,Toast.LENGTH_LONG).show(); // 郵便番号入れたい
                 } catch (JSONException e) {
                     e.printStackTrace();
                     errorOnTask(e.toString());
