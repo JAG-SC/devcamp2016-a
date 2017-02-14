@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="fefba22616083c734948a0cbaa01a07a7a3fa32e">
+        sha1="f03d4d53de2668959e5f6f5fc56ac238053f290c">
         <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2c2825cc9ffd9308896824a8acdc6316ffcd8973\classes.dex" />
     </item>
     <item
@@ -43,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="afd0723e6a03ac1ea2e60fb0832802c53be799aa">
+        sha1="da98f1784e514b2a3218d90136e3f98f5754b27a">
         <dex dex="C:\Users\takayuki\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_8d7c477508aec4521d978f252e2bad5c39e33c74\classes.dex" />
     </item>
     <item
