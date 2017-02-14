@@ -64,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ListView listView = (ListView) parent;
                 String item = (String) listView.getItemAtPosition(position);
-
+                task_search_postal_code = new AsyncSearchPostalCodeTask(); // 道（非同期タスク）を作る
+                task_search_postal_code.execute(item);            // 実行する
                 Toast.makeText(getApplicationContext(), item + " clicked",Toast.LENGTH_LONG).show(); // 郵便番号入れたい
             }
         });
@@ -135,15 +136,31 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
             try {
-                String url_str = "http://geoapi.heartrails.com/api/json"
+                String url_str = "http://api.ekispert.jp/v1/json/station?";
+                url_str += "key=" + APIKEY.ekispert;
+                url_str += "&type=train";
+                url_str += "&name=" + strings[0];
+                URL api_request_url = new URL( url_str);
+                String results = HTTP.request(api_request_url);
+
+                JSONObject json = new JSONObject(results);
+                JSONObject result_set = json.getJSONObject("ResultSet");
+                JSONObject point = result_set.getJSONObject("Point");
+                JSONObject geopoint = point.getJSONObject("GeoPoint");
+                String keido = geopoint.getString("longi_d");
+                String ido = geopoint.getString("lati_d");
+
+                url_str = "http://geoapi.heartrails.com/api/json"
                 url_str += "?method=searchByGeoLocation"
                 url_str += "&x="+ keido + "&y=" + ido
-                URL api_request_url = new URL( url_str);
+                api_request_url = new URL( url_str);
                 return HTTP.request(api_request_url);
             } catch (IOException e) {
                 e.printStackTrace();
                 error_message = e.toString();
                 return null;
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
 
         }
@@ -155,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             if (results != null) {
                 try {
                     JSONObject json = new JSONObject(results);
-                    JSONObject result_set = json.getJSONObject("ResultSet");
+                    JSONObject result_set = json.getJSONObject("response");
                     if(result_set.has("Point")) {
                         JSONArray points = result_set.optJSONArray("Point");
                         if (points == null) {
