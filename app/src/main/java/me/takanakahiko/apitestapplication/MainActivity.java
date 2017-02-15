@@ -175,8 +175,9 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject json = new JSONObject(results);
                     JSONObject reaponse = json.getJSONObject("response");
                     JSONArray locations = reaponse.getJSONArray("location");
-                    String postal = locations.getJSONObject(0).getString("postal"); // ちょっとよくわからないです
-                    Toast.makeText(getApplicationContext(), postal,Toast.LENGTH_LONG).show(); // 郵便番号入れたい
+                    String postal = locations.getJSONObject(0).getString("postal");
+                    String toast = "T " + postal.substring(0,3) + "-" + postal.substring(3);
+                    Toast.makeText(getApplicationContext(), toast, Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                     errorOnTask(e.toString());

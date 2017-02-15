@@ -12,21 +12,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\ayurin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\ayurin\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_04fa686e109a091e30b967e970e274ac61d5d535\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\ayurin\Documents\GitHub\devcamp2016-a\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
         <dex dex="C:\Users\ayurin\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_b4edfd86f32328d22b2ab8580b61c1344aefbbe6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ayurin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\ayurin\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_04fa686e109a091e30b967e970e274ac61d5d535\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="38577203bf619920c4e8249e8eecb9981ff75b74">
+        sha1="1ad699886776930614290075fad11a7abbb43164">
         <dex dex="C:\Users\ayurin\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f5129c93c2914df867a64e34ccec36ee8f27d6aa\classes.dex" />
     </item>
     <item
@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="e1b40543e2efd7ab745fc46ed99aa0d56aec3230">
+        sha1="1b6e1f2a7262126e508fd77ee704925c5e3400bc">
         <dex dex="C:\Users\ayurin\Documents\GitHub\devcamp2016-a\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d8a6371c4b9018a12553fb0624154d0e6cc4fd7d\classes.dex" />
     </item>
 
