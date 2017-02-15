@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                 String item = (String) listView.getItemAtPosition(position);
                 task_search_postal_code = new AsyncSearchPostalCodeTask(); // 道（非同期タスク）を作る
                 task_search_postal_code.execute(item);            // 実行する
-
             }
         });
     }
@@ -176,7 +175,11 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject reaponse = json.getJSONObject("response");
                     JSONArray locations = reaponse.getJSONArray("location");
                     String postal = locations.getJSONObject(0).getString("postal"); // ちょっとよくわからないです
-                    Toast.makeText(getApplicationContext(), postal,Toast.LENGTH_LONG).show(); // 郵便番号入れたい
+                    //郵便番号の形式「〒XXX-XXXX」
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(postal);
+                    sb.insert(3,"-");
+                    Toast.makeText(getApplicationContext(), "〒"+new String(sb),Toast.LENGTH_LONG).show(); // 郵便番号入れたい
                 } catch (JSONException e) {
                     e.printStackTrace();
                     errorOnTask(e.toString());
